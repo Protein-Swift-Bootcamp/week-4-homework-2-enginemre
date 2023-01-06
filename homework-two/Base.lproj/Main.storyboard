@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-286" y="-11"/>
+            <point key="canvasLocation" x="-128" y="-11"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="x2A-Qo-DGj">
@@ -78,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClE-9i-EEl">
-                                <rect key="frame" x="172.5" y="382.5" width="69.5" height="24"/>
+                                <rect key="frame" x="172.5" y="382.5" width="69" height="24"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfh-w0-lXn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478.2608695652175" y="-724.55357142857144"/>
+            <point key="canvasLocation" x="2355" y="-708"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="uMm-Km-FOV">
@@ -148,26 +148,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3bN-fD-bhZ">
-                                <rect key="frame" x="8" y="56" width="398" height="768"/>
+                                <rect key="frame" x="8" y="99" width="398" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2za-v8-9Tf">
+                                <rect key="frame" x="161.5" y="56" width="91" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Geri Dön"/>
+                                <connections>
+                                    <action selector="backButton:" destination="WXb-sx-c5D" eventType="touchUpInside" id="WEr-8N-epY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u4V-wb-7Ek"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3bN-fD-bhZ" firstAttribute="top" secondItem="u4V-wb-7Ek" secondAttribute="top" constant="8" id="7AX-Is-e5f"/>
+                            <constraint firstItem="2za-v8-9Tf" firstAttribute="top" secondItem="u4V-wb-7Ek" secondAttribute="top" constant="8" id="2Qn-Hb-gDt"/>
+                            <constraint firstItem="3bN-fD-bhZ" firstAttribute="top" secondItem="2za-v8-9Tf" secondAttribute="bottom" constant="8" id="AwP-UG-daO"/>
                             <constraint firstItem="3bN-fD-bhZ" firstAttribute="leading" secondItem="u4V-wb-7Ek" secondAttribute="leading" constant="8" id="NqD-jt-3qb"/>
                             <constraint firstItem="u4V-wb-7Ek" firstAttribute="bottom" secondItem="3bN-fD-bhZ" secondAttribute="bottom" constant="38" id="ckO-Uz-5VW"/>
+                            <constraint firstItem="2za-v8-9Tf" firstAttribute="centerX" secondItem="p8o-dD-zuy" secondAttribute="centerX" id="d9J-L9-cXh"/>
                             <constraint firstItem="u4V-wb-7Ek" firstAttribute="trailing" secondItem="3bN-fD-bhZ" secondAttribute="trailing" constant="8" id="zaS-f0-VnB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="d9L-i1-iyq"/>
                     <connections>
                         <outlet property="locationsTableView" destination="3bN-fD-bhZ" id="TAd-Ma-57q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcS-XS-Eoh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173.913043478261" y="602.67857142857144"/>
+            <point key="canvasLocation" x="1086.9565217391305" y="655.58035714285711"/>
         </scene>
         <!--Character View Controller-->
         <scene sceneID="J19-YM-ywo">
@@ -177,27 +188,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="il6-rS-8VE">
-                                <rect key="frame" x="8" y="92" width="398" height="796"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6T-PV-2ws">
                                 <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Karakterler" id="ip1-1e-dsy"/>
+                                    <navigationItem title="Karakterler" id="5dA-fu-CNB"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzi-d8-dlf">
+                                <rect key="frame" x="161.5" y="104" width="91" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Geri Dön"/>
+                                <connections>
+                                    <action selector="goBackButton:" destination="HG0-4Z-5Wj" eventType="touchUpInside" id="C2H-Bo-SmN"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="il6-rS-8VE">
+                                <rect key="frame" x="0.0" y="151" width="414" height="724"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="724" id="pRY-UR-ySC"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6F6-tl-d7P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="il6-rS-8VE" firstAttribute="leading" secondItem="6F6-tl-d7P" secondAttribute="leading" constant="8" id="2Eq-bm-zHN"/>
-                            <constraint firstAttribute="bottom" secondItem="il6-rS-8VE" secondAttribute="bottom" constant="8" id="8TU-Fs-Jvk"/>
+                            <constraint firstItem="il6-rS-8VE" firstAttribute="trailing" secondItem="6F6-tl-d7P" secondAttribute="trailing" id="7VY-eN-rHs"/>
+                            <constraint firstItem="il6-rS-8VE" firstAttribute="leading" secondItem="6F6-tl-d7P" secondAttribute="leading" id="Jrq-ob-0cW"/>
                             <constraint firstAttribute="trailing" secondItem="Y6T-PV-2ws" secondAttribute="trailing" id="Khj-dY-9e1"/>
-                            <constraint firstItem="6F6-tl-d7P" firstAttribute="trailing" secondItem="il6-rS-8VE" secondAttribute="trailing" constant="8" id="NTp-9b-r5P"/>
-                            <constraint firstItem="il6-rS-8VE" firstAttribute="top" secondItem="Y6T-PV-2ws" secondAttribute="bottom" id="af5-XZ-0qq"/>
+                            <constraint firstItem="bzi-d8-dlf" firstAttribute="top" secondItem="Y6T-PV-2ws" secondAttribute="bottom" constant="12" id="UfA-vz-N2m"/>
+                            <constraint firstItem="bzi-d8-dlf" firstAttribute="centerX" secondItem="awN-nd-sBZ" secondAttribute="centerX" id="mgA-pr-N7Q"/>
                             <constraint firstItem="Y6T-PV-2ws" firstAttribute="leading" secondItem="6F6-tl-d7P" secondAttribute="leading" id="q6V-wc-8Ed"/>
                             <constraint firstItem="Y6T-PV-2ws" firstAttribute="top" secondItem="6F6-tl-d7P" secondAttribute="top" id="yN3-h4-faJ"/>
+                            <constraint firstItem="il6-rS-8VE" firstAttribute="top" secondItem="bzi-d8-dlf" secondAttribute="bottom" constant="12" id="zIH-IH-pN5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -206,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6f-Gt-24A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="-724"/>
+            <point key="canvasLocation" x="1087" y="-709"/>
         </scene>
         <!--Location Detail View Controller-->
         <scene sceneID="gPf-YI-R3u">
@@ -247,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cp4-y0-hEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2389.8550724637685" y="602.67857142857144"/>
+            <point key="canvasLocation" x="2354" y="656"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O37-Gz-Kjz">

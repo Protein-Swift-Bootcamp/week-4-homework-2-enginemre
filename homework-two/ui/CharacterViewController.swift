@@ -10,6 +10,7 @@ import Kingfisher
 class CharacterViewController: UIViewController {
     
     @IBOutlet weak var charactersTableView: UITableView!
+
     
     // Setting empty array for table view
     var characters: Array<Result> = []
@@ -21,6 +22,14 @@ class CharacterViewController: UIViewController {
         // Custom cell registering
         charactersTableView.register(.init(nibName: "CharactersCell", bundle: nil), forCellReuseIdentifier: "CharacterCellIdentifier")
         fetchCharacters()
+    }
+    
+    @IBAction func goBackButton(_ sender: Any) {
+        goCustomBack()
+    }
+    @objc
+    func goCustomBack(){
+        self.dismiss(animated: true)
     }
     
     // MARK: Fetching all characters

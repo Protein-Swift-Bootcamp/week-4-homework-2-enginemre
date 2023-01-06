@@ -21,7 +21,10 @@ class LocationViewController: UIViewController {
         fetchAllLocation()
     }
     
-
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     private func fetchAllLocation(){
         let indic = self.showLoader(view: self.view)
         if let url = URL(string: "https://rickandmortyapi.com/api/location"){

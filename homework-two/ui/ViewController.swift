@@ -9,10 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
 
 
     @IBAction func locationsButton(_ sender: Any) {
@@ -22,6 +24,9 @@ class ViewController: UIViewController {
             present(vc, animated: true)
         }
     }
+    
+    
+    
     @IBAction func charactersButton(_ sender: Any) {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
         if let vc = storyBoard.instantiateViewController(withIdentifier: "CharacterViewController") as? CharacterViewController{
@@ -29,5 +34,7 @@ class ViewController: UIViewController {
             present(vc, animated: true)
         }
     }
+    
+    
 }
 
